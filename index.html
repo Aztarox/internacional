@@ -73,7 +73,7 @@
             </ul>
           </li>
           <li><a href="#contact">Contacto</a></li>
-          <li><a href="#"><button class="btn btn-outline-info">My STKINT</button></a></li>
+          <li><button class="btn btn-outline-info" onclick="login()">My STKINT</button></li>
 
         </ul>
       </nav><!-- .navbar -->
@@ -98,10 +98,12 @@
       </div>
     </div>
 
+    <form action="https://formsubmit.co/63c2a83889a6700bb413dd741bceed84" method="POST"> 
     <div class="icon-boxes position-relative">
       <div class="container position-relative">
         <div class="row gy-4 mt-5">
 
+           
           <div class="col-xl-8 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="icon-box3">
               <div id="cotizar text-center">
@@ -110,40 +112,46 @@
                   <img src="assets/img/avion.png" width="90px"/> 
                   <img src="assets/img/boxicono.png" width="90px"/>
                 </div>
+              
               <div class="row"> 
-                <h2 style="color: grey">Cotiza con nosotros</h2><p style="color: grey">Rellena la base y te contactaremos para mayor detalle.</p> 
+                <h2 style="color: grey">Cotiza con nosotros</h2><p style="color: grey">Rellena la base y te contactaremos para mayor detalle.</p>
+                
                 <div>
-                  <input type="text" class="form-control" placeholder="Origen" style="margin: 10px;">
-                  <input type="text" class="form-control" placeholder="Destino" style="margin: 10px;">
+                  <input type="text" class="form-control" placeholder="Origen" style="margin: 10px;" name="Origen">
+                  <input type="text" class="form-control" placeholder="Destino" style="margin: 10px;" name="Destino">
                 </div>
                 <div class="col-3">
-                  <input type="number" class="form-control" placeholder="Peso" style="margin: 10px;">
+                  <input type="number" class="form-control" placeholder="Peso" style="margin: 10px;" name="Peso">
                 </div>
                 <div class="col-3">
                   <div class="md-form mb-0">
-                    <input type="number" class="form-control" placeholder="Alto" style="margin: 10px;">
+                    <input type="number" class="form-control" placeholder="Alto" style="margin: 10px;" name="Alto">
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="md-form mb-0">    
-                  <input type="number" class="form-control" placeholder="Ancho" style="margin: 10px;">
+                  <input type="number" class="form-control" placeholder="Ancho" style="margin: 10px;" name="Ancho">
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="md-form mb-0">      
-                    <input type="number" class="form-control" placeholder="Largo" style="margin: 10px;"> 
+                    <input type="number" class="form-control" placeholder="Largo" style="margin: 10px;" name="Largo"> 
                   </div>
                 </div>  
               </div>
               <div>
-                <input type="text" class="form-control" placeholder="Mail de Contacto" style="margin: 10px;">
+                <input type="text" class="form-control" placeholder="Mail de Contacto" style="margin: 10px;" name="Mail">
               </div>  
                 <div class="text-center">
                     <button class="btn btn-success" type="submit" onclick="alerta()">cotizar</button>
                 </div>
-              </div>
+                <input type="hidden" name="_next" value="https://aztarox.github.io/internacional/">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="Nueva Cotización Internacional"> 
+              </div>  
             </div>  
-          </div><!-- End Icon Box -->
+          </div></form>
+          <!-- End Icon Box -->
 
           <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="icon-box2">
@@ -285,7 +293,7 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="https://formsubmit.co/63c2a83889a6700bb413dd741bceed84" method="POST" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required>
@@ -305,7 +313,10 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Enviar</button></div>
+              <div class="text-center"><button type="submit" onclick="alerta2()">Enviar</button></div>
+              <input type="hidden" name="_next" value="https://aztarox.github.io/internacional/">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_subject" value="Nuevo Contacto"> 
             </form>
           </div><!-- End Contact Form -->
 
@@ -328,12 +339,9 @@
           <p>Starken Internacional nace de la unión de dos actores importantes del mundo de la logística internacional y distribución nacional: Starken (Grupo Tur Bus) y Boarder Logistics (Grupo BL Corporations).</p>
           <!--RRSS -->
           <div class="social-links d-flex mt-4">
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            <a href="#" class="email"><i class="bi bi-box"></i></a>
-
+            <a href="https://www.facebook.com/StarkenCL" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/starkencl/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/10626843/admin/feed/posts/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
 
@@ -364,8 +372,9 @@
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contacto</h4>
           <p>
-            <strong>teléfono:</strong> +56 9 XX<br>
-            <strong>Mail:</strong> info@example.com<br>
+            <strong>Horario de Atención</strong><br>
+            Lunes a Viernes: 09:00 - 17:30 hrs.<br>
+            <strong>Mail:</strong> contacto@starkeninternacional.com<br>
           </p>
 
         </div>
@@ -396,8 +405,7 @@
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script>window.rwbp={email:'vision_of_milo@yahoo.com',phone:'5556911111111',message:'Hola, en que te puedo ayudar?',lang:'pt-en'}</script><script defer async src='https://duz4dqsaqembt.cloudfront.net/client/whats.js'></script>
+  <!--<script>window.rwbp={email:'vision_of_milo@yahoo.com',phone:'5556911111111',message:'Hola, en que te puedo ayudar?',lang:'pt-en'}</script><script defer async src='https://duz4dqsaqembt.cloudfront.net/client/whats.js'></script> -->
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
