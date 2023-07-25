@@ -295,9 +295,41 @@ document.addEventListener('DOMContentLoaded', () => {
 function alerta(){
 	Swal.fire({
 		position: 'center',
-		icon: 'info',
+		icon: 'success',
 		title: 'Cotizador',
-		html: 'En estos instantes nuestro cotizador se encuentra en mantención. <br> Favor comunícate con <a href="mailto: contacto@starkeninternacional.com">contacto</a>',
+		html: 'Tus datos fueron enviados con éxito',
 		showConfirmButton: false,
 	});
+}
+
+function alerta2(){
+	Swal.fire({
+		position: 'center',
+		icon: 'success',
+		title: 'Contacto',
+		html: 'Tus datos fueron enviados con éxito',
+		showConfirmButton: false,
+	});
+}
+
+function login(){
+	Swal.fire({
+    title: 'My STKINT',
+    html: `<input type="text" id="login" class="swal2-input" placeholder="Mail">
+    <input type="password" id="password" class="swal2-input" placeholder="Password">`,
+    confirmButtonText: 'Ingresar',
+    focusConfirm: false,
+    preConfirm: () => {
+      const login = Swal.getPopup().querySelector('#login').value
+      const password = Swal.getPopup().querySelector('#password').value
+      if (!login || !password) {
+        Swal.showValidationMessage(`Ingresa un usuario y contraseña correctos`)
+      }
+      return { login: login, password: password }
+    }
+  }).then((result) => {
+    Swal.fire(`
+      Login: El usuario no se encuentra registrado
+    `.trim())
+  })
 }
