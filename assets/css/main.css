@@ -2720,3 +2720,14 @@ body {
   width: 700px;
   height: auto;
 }
+
+.btn-outline-info {
+  background-color: #e7396e;
+  border-color: #e7396e;
+  color: #fff;
+}
+
+.btn-outline-info:hover {
+  background-color:  #62f537;
+  color: #e7396e,
+}
