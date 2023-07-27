@@ -2715,3 +2715,8 @@ body {
     max-width: auto; 
     margin: 0 auto;
 }
+
+#preview {
+  width: 700px;
+  height: auto;
+}
