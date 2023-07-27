@@ -2712,7 +2712,6 @@ section {
 html { background-color: #000; } 
 body {
     min-height: 100vh;
-    max-width: auto;
-    background-color: papayawhip; 
+    max-width: auto; 
     margin: 0 auto;
 }
