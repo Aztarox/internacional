@@ -2708,3 +2708,11 @@ section {
 .footer .credits a {
   color: #fff;
 }
+
+html { background-color: #000; } 
+body {
+    min-height: 100vh;
+    max-width: auto;
+    background-color: papayawhip; 
+    margin: 0 auto;
+}
