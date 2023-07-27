@@ -2709,7 +2709,9 @@ section {
   color: #fff;
 }
 
-html { background-color: #000; } 
+html { background-color: #fff;
+} 
+
 body {
     min-height: 100vh;
     max-width: auto; 
