@@ -338,7 +338,7 @@ function inco(){
 	Swal.fire({
 		position: 'center',
     width: 800,
-    html: '<img id="preview" src="/assets/img/incoterms.jpg">',
+    html: '<img id="preview" src="assets/img/incoterms.jpg">',
 		showConfirmButton: false,
 	});
 }
