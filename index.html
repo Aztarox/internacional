@@ -48,11 +48,10 @@
 
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo-blanco.png" height="300px">
+        <img src="assets/img/logo-blanco.png" height="100px">
       </a>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html">Home</a></li>
           <li><a href="conocenos.html">Conócenos</a></li>
           <li class="dropdown"><a href="#"><span>Soluciones</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
@@ -66,6 +65,7 @@
           <li class="dropdown"><a href="#"><span>Centro de ayuda</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="starken-preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+              <li><a onclick="inco()">INCOTERMS</a></li>
             </ul>
           </li>
           <li><a href="#contact">Contacto</a></li>
@@ -104,41 +104,57 @@
             <div class="icon-box3">
               <div id="cotizar text-center">
                 <div class="icon text-center">
-		<!--	
-                  <img src="assets/img/barco.png" width="90px"/>
-                  <img src="assets/img/avion.png" width="90px"/> 
-                  <img src="assets/img/boxicono.png" width="90px"/> -->
+
                 </div>
               
               <div class="row"> 
-                <h2 style="color: grey">Cotiza con nosotros</h2><p style="color: grey">Rellena la base y te contactaremos para mayor detalle.</p>
+                <h2 style="color: grey">Cotiza con nosotros</h2><p style="color: grey">Completa el formulario y nos contactaremos para mayor detalle.</p>
                 
                 <div>
                   <input type="text" class="form-control" placeholder="Origen" style="margin: 10px;" name="Origen">
                   <input type="text" class="form-control" placeholder="Destino" style="margin: 10px;" name="Destino">
                 </div>
                 <div class="col-3">
-                  <input type="number" class="form-control" placeholder="Peso" style="margin: 10px;" name="Peso">
+                  <input type="number" class="form-control" placeholder="Peso kg" style="margin: 10px;" name="Peso">
                 </div>
                 <div class="col-3">
                   <div class="md-form mb-0">
-                    <input type="number" class="form-control" placeholder="Alto" style="margin: 10px;" name="Alto">
+                    <input type="number" class="form-control" placeholder="Alto cm" style="margin: 10px;" name="Alto">
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="md-form mb-0">    
-                  <input type="number" class="form-control" placeholder="Ancho" style="margin: 10px;" name="Ancho">
+                  <input type="number" class="form-control" placeholder="Ancho cm" style="margin: 10px;" name="Ancho">
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="md-form mb-0">      
-                    <input type="number" class="form-control" placeholder="Largo" style="margin: 10px;" name="Largo"> 
+                    <input type="number" class="form-control" placeholder="Largo cm" style="margin: 10px;" name="Largo"> 
+                  </div>
+                </div> 
+                
+                <div class="col-6">
+                  <div class="md-form mb-0">
+                    <fieldset class="form-control">    
+                      <input type="radio" id="AIR" name="Vía" value="AIR">
+                        <label for="AIR">Aérea</label>
+                        <input type="radio" id="SEA" name="Vía" value="SEA">
+                        <label for="SEA">Maritima</label>
+                        <input type="radio" id="BOX" name="Vía" value="BOX">
+                        <label for="BOX">Terrestre</label>
+                  </fieldset>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="md-form mb-0">    
+                  <input type="email" class="form-control" placeholder="Mail de contacto" style="margin: 10px;" name="Mail" required>
                   </div>
                 </div>  
+
               </div>
-              <div>
-                <input type="text" class="form-control" placeholder="Mail de Contacto" style="margin: 10px;" name="Mail">
-              </div>  
+
+
+  
                 <div class="text-center">
                     <button class="btn btn-success" type="submit" onclick="alerta()">cotizar</button>
                 </div>
@@ -154,7 +170,7 @@
             <div class="icon-box2">
               <h4 class="title">Sigue tu envío</h4>
               <div style="margin: 50px 50px 50px 50px;">
-                <a href="https://www.starkenbox.com/seguimiento" target="_blank"><button type="button" class="btn btn-outline-secondary">Starken Box</button></a>
+                <a href="https://www.starkenbox.com/" target="_blank"><button type="button" class="btn btn-outline-secondary">Starken Box</button></a>
               </div>
               <div style="margin: 50px 50px 50px 50px;">
                 <a href="https://www.starken.cl/seguimiento" target="_blank"><button type="button" class="btn btn-outline-secondary">Starken CL</button></a>
@@ -186,7 +202,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="service-item  position-relative">
-              <div class="icon">
+              <div class="">
                 <img src="assets/img/BOX.png" width="200px">
               </div>
               <h3>Starken BOX</h3>
@@ -199,7 +215,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="service-item position-relative">
-              <div class="icon">
+              <div class="">
                 <img src="assets/img/cta-bg.jpg" width="200px">
               </div>
               <h3>Starken AIR</h3>
@@ -210,7 +226,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="service-item position-relative">
-              <div class="icon">
+              <div class="">
                 <img src="assets/img/breadcrumbs-bg.jpg" width="200px">
               </div>
               <h3>Starken E-commerce</h3>
@@ -222,7 +238,7 @@
 
           <div class="col-lg-6 col-md-6">
             <div class="service-item position-relative">
-              <div class="icon">
+              <div class="">
                 <img src="assets/img/breadcrumbs-bg.jpg" width="200px">
               </div>
               <h3>Starken FCL</h3>
@@ -233,7 +249,7 @@
 
           <div class="col-lg-6 col-md-6">
             <div class="service-item position-relative">
-              <div class="icon">
+              <div class="">
                 <img src="assets/img/LCL.png" width="200px">
               </div>
               <h3>Starken LCL</h3>
@@ -266,7 +282,7 @@
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h4>Mail:</h4>
-                  <p>contacto@starkeninternacional.com</p>
+                  <p>cl-info@starkeninternacional.com</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -330,16 +346,18 @@
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-info text-center">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <img src="assets/img/logo-blanco.png" height="500px" class="logo d-flex align-items-center">
+          <a href="index.html" class="logo align-items-center">
+            <img src="assets/img/logo-blanco.png" height="500px" class="logo align-items-center">
           </a>
           <p>Starken Internacional nace de la unión de dos actores importantes del mundo de la logística internacional y distribución nacional: Starken (Grupo Tur Bus) y Boarder Logistics (Grupo BL Corporations).</p>
           <!--RRSS -->
+          <div class="align-items-center">
           <div class="social-links d-flex mt-4">
-            <a href="https://www.facebook.com/StarkenCL" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/starkencl/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/10626843/admin/feed/posts/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.facebook.com/StarkenCL" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/starkencl/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/10626843/admin/feed/posts/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
           </div>
+        </div>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
@@ -371,8 +389,7 @@
           <p>
             <strong>Horario de Atención</strong><br>
             Lunes a Viernes: 09:00 - 17:30 hrs.<br>
-            <strong>Mail:</strong> contacto@starkeninternacional.com<br>
-            <button class="btn btn-outline-warning" onclick="inco()"><strong>INCOTERMS</strong></button>
+            <strong>Mail:</strong> cl-info@starkeninternacional.com<br>
           </p>
 
         </div>
