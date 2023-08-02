@@ -342,3 +342,124 @@ function inco(){
 		showConfirmButton: false,
 	});
 }
+
+
+// Convertidor de longitudes
+function convertir(){
+
+  //Extracción de datos
+  var numero1 = document.getElementById("unidad1valor").value;
+  var unidad1 = document.getElementById("unidad1name").value;
+  var unidad2 = document.getElementById("unidad2name").value;
+
+  //medidas
+  function unidad(unidad2){  
+    var unidadfinal
+    if(unidad2 === "1"){unidadfinal = "km";}
+    else if (unidad2 === "2") {unidadfinal = "m";}
+    else if (unidad2 === "3") {unidadfinal = "mi";}
+    else if (unidad2 === "4") {unidadfinal = "ft";}
+    else {unidadfinal = "in";}
+  
+    return unidadfinal;
+  };
+  var medidas = unidad(unidad2);
+
+  // Validaciones
+  if (numero1 <= 0){
+    Swal.fire({
+      icon: 'warning',
+      position: 'center',
+      width: 800,
+      html: 'El número debe ser mayor a 0(cero)',
+      showConfirmButton: false,
+    });
+    
+  } else {resultado}
+
+  //Calculando
+  function calculando(){
+
+    var resultadocalculando
+
+    if (unidad1 === "1" && unidad2 === "1") {resultadocalculando = numero1 * 1;}
+    else if (unidad1 === "1" && unidad2 === "2") {resultadocalculando = numero1 * 1000;}
+    else if (unidad1 === "1" && unidad2 === "3") {resultadocalculando = numero1 * 0.62;}
+    else if (unidad1 === "1" && unidad2 === "4") {resultadocalculando = numero1 * 3280.84;}
+    else if (unidad1 === "1" && unidad2 === "5") {resultadocalculando = numero1 * 39370.08;}
+    else if (unidad1 === "2" && unidad2 === "1") {resultadocalculando = numero1 / 1000;}
+    else if (unidad1 === "2" && unidad2 === "2") {resultadocalculando = numero1 * 1;}
+    else if (unidad1 === "2" && unidad2 === "3") {resultadocalculando = numero1 / 1609;}
+    else if (unidad1 === "2" && unidad2 === "4") {resultadocalculando = numero1 * 3.281;}
+    else if (unidad1 === "2" && unidad2 === "5") {resultadocalculando = numero1 * 39.37;}
+    else if (unidad1 === "3" && unidad2 === "1") {resultadocalculando = numero1 * 1.609;}
+    else if (unidad1 === "3" && unidad2 === "2") {resultadocalculando = numero1 * 1609;}
+    else if (unidad1 === "3" && unidad2 === "3") {resultadocalculando = numero1 * 1;}
+    else if (unidad1 === "3" && unidad2 === "4") {resultadocalculando = numero1 * 5280;}
+    else if (unidad1 === "3" && unidad2 === "5") {resultadocalculando = numero1 * 63360;}
+    else if (unidad1 === "4" && unidad2 === "1") {resultadocalculando = numero1 / 3281;}
+    else if (unidad1 === "4" && unidad2 === "2") {resultadocalculando = numero1 / 3.281;}
+    else if (unidad1 === "4" && unidad2 === "3") {resultadocalculando = numero1 / 5280;}
+    else if (unidad1 === "4" && unidad2 === "4") {resultadocalculando = numero1 * 1;}
+    else if (unidad1 === "4" && unidad2 === "5") {resultadocalculando = numero1 * 12;}
+    else if (unidad1 === "5" && unidad2 === "1") {resultadocalculando = numero1 / 39370;}
+    else if (unidad1 === "5" && unidad2 === "2") {resultadocalculando = numero1 / 39.37;}
+    else if (unidad1 === "5" && unidad2 === "3") {resultadocalculando = numero1 / 63360;}
+    else if (unidad1 === "5" && unidad2 === "4") {resultadocalculando = numero1 / 12;}
+    else if (unidad1 === "5" && unidad2 === "5") {resultadocalculando = numero1 * 1;}
+
+    return resultadocalculando
+  };
+
+  var calculado = calculando();
+  
+  // Agregar separador de miles
+  function formatearNumero(calculado){
+    return new Intl.NumberFormat("es-CL").format(calculado);
+  }
+
+  //Formulas
+  function formulas(){
+
+    var formularesultado
+
+    if (unidad1 === "1" && unidad2 === "1") {formularesultado = " ";}
+    else if (unidad1 === "1" && unidad2 === "2") {formularesultado = "<b>Fórmula:</b> debes multiplicar por 1.000";}
+    else if (unidad1 === "1" && unidad2 === "3") {formularesultado = "<b>Fórmula:</b> debes multiplicar por 0,62";}
+    else if (unidad1 === "1" && unidad2 === "4") {formularesultado = "<b>Fórmula:</b> debes multiplicar por 3.280,84";}
+    else if (unidad1 === "1" && unidad2 === "5") {formularesultado = "<b>Fórmula:</b> debes multiplicar por 39.370,08";}
+    else if (unidad1 === "2" && unidad2 === "1") {formularesultado = "<b>Fórmula:</b> debes dividir por 1.000";}
+    else if (unidad1 === "2" && unidad2 === "2") {formularesultado = " ";}
+    else if (unidad1 === "2" && unidad2 === "3") {formularesultado = "<b>Fórmula:</b> debes dividir por 1.609";}
+    else if (unidad1 === "2" && unidad2 === "4") {formularesultado = "<b>Fórmula:</b> debes multiplicar por 3,281";}
+    else if (unidad1 === "2" && unidad2 === "5") {formularesultado = "<b>Fórmula:</b> debes multiplicar por 39,37";}
+    else if (unidad1 === "3" && unidad2 === "1") {formularesultado = "<b>Fórmula:</b> debes multiplicar por 1,609";}
+    else if (unidad1 === "3" && unidad2 === "2") {formularesultado = "<b>Fórmula:</b> debes multiplicar por 1.609";}
+    else if (unidad1 === "3" && unidad2 === "3") {formularesultado = " ";}
+    else if (unidad1 === "3" && unidad2 === "4") {formularesultado = "<b>Fórmula:</b> debes multiplicar por 5.280";}
+    else if (unidad1 === "3" && unidad2 === "5") {formularesultado = "<b>Fórmula:</b> debes multiplicar por 63.360";}
+    else if (unidad1 === "4" && unidad2 === "1") {formularesultado = "<b>Fórmula:</b> debes dividir por 3.281";}
+    else if (unidad1 === "4" && unidad2 === "2") {formularesultado = "<b>Fórmula:</b> debes dividir por 3,281";}
+    else if (unidad1 === "4" && unidad2 === "3") {formularesultado = "<b>Fórmula:</b> debes dividir por 5.280";}
+    else if (unidad1 === "4" && unidad2 === "4") {formularesultado = " ";}
+    else if (unidad1 === "4" && unidad2 === "5") {formularesultado = "<b>Fórmula:</b> debes multiplicar por 12";}
+    else if (unidad1 === "5" && unidad2 === "1") {formularesultado = "<b>Fórmula:</b> debes dividir por 39.370";}
+    else if (unidad1 === "5" && unidad2 === "2") {formularesultado = "<b>Fórmula:</b> debes dividir por 39,37";}
+    else if (unidad1 === "5" && unidad2 === "3") {formularesultado = "<b>Fórmula:</b> debes dividir por 63.360";}
+    else if (unidad1 === "5" && unidad2 === "4") {formularesultado = "<b>Fórmula:</b> debes dividir por 12";}
+    else if (unidad1 === "5" && unidad2 === "5") {formularesultado = " ";}
+
+    return formularesultado
+  };
+
+  var resultadoformula = formulas();
+
+  //resultado
+  var resultado = "<b>" + formatearNumero(calculado) + " " + medidas + "</b><br> " + resultadoformula;
+  
+
+  // Escribiendo el resultado
+  document.getElementById('mens1').innerHTML = resultado;  
+  
+
+};
