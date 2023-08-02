@@ -48,11 +48,10 @@
 
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo-blanco.png" height="300px">
+        <img src="assets/img/logo-blanco.png" height="100px">
       </a>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html">Home</a></li>
           <li><a href="conocenos.html">Conócenos</a></li>
           <li class="dropdown"><a href="#"><span>Soluciones</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
@@ -65,7 +64,8 @@
           </li>
           <li class="dropdown"><a href="#"><span>Centro de ayuda</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-               <li><a href="starken-preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+              <li><a href="starken-preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+              <li><a onclick="inco()">INCOTERMS</a></li>
             </ul>
           </li>
           <li><a href="index.html#contact">Contacto</a></li>
@@ -105,13 +105,37 @@
       </nav>
     </div><!-- End Breadcrumbs -->
 
-    <section class="sample-page">
-      <div class="container" data-aos="fade-up">
-
-        
-
-      </div>
-    </section>
+        <section class="sample-page">
+          <div class="container" data-aos="fade-up">
+              <div class="col-lg-12 col-md-12 align-items-center">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Longitudes</h5>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><input type="number" class="form-control" name="unidad1valor" id="unidad1valor" placeholder="1" onchange="convertir();"></li>
+                    <li class="list-group-item"><label>De:</label>
+                      <select class="form-control" id="unidad1name" name="unidad1name" placeholder="kilometros" onchange="convertir();">
+                        <option value="1">Kilometros (km)</option>
+                        <option value="2">Metros (m)</option>
+                        <option value="3">Milla (mi)</option>
+                        <option value="4">Pie (ft)</option>
+                        <option value="5">Pulgada (in)</option>
+                      </select></li>
+                    <li class="list-group-item"><label>A:</label>
+                      <select class="form-control" id="unidad2name" name="unidad2name" onchange="convertir();">
+                        <option value="1">Kilometros (km)</option>
+                        <option value="2">Metros (m)</option>
+                        <option value="3">Milla (mi)</option>
+                        <option value="4">Pie (ft)</option>
+                        <option value="5">Pulgada (in)</option>
+                      </select> </li>
+                    <li class="list-group-item align-items-center"><p class="align-items-center" id="mens1"><strong>RESULTADO</strong></p></li>
+                  </ul>
+                </div>                
+            </div>
+          </div>
+        </section>  
 
   </main><!-- End #main -->
 
@@ -121,16 +145,18 @@
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-info text-center">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <img src="assets/img/logo-blanco.png" height="500px" class="logo d-flex align-items-center">
+          <a href="index.html" class="logo align-items-center">
+            <img src="assets/img/logo-blanco.png" height="500px" class="logo align-items-center">
           </a>
           <p>Starken Internacional nace de la unión de dos actores importantes del mundo de la logística internacional y distribución nacional: Starken (Grupo Tur Bus) y Boarder Logistics (Grupo BL Corporations).</p>
           <!--RRSS -->
+          <div class="align-items-center">
           <div class="social-links d-flex mt-4">
-            <a href="https://www.facebook.com/StarkenCL" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/starkencl/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/10626843/admin/feed/posts/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.facebook.com/StarkenCL" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/starkencl/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/10626843/admin/feed/posts/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
           </div>
+        </div>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
@@ -162,8 +188,7 @@
           <p>
             <strong>Horario de Atención</strong><br>
             Lunes a Viernes: 09:00 - 17:30 hrs.<br>
-            <strong>Mail:</strong> contacto@starkeninternacional.com<br>
-            <button class="btn btn-outline-warning" onclick="inco()"><strong>INCOTERMS</strong></button>
+            <strong>Mail:</strong> cl-info@starkeninternacional.com<br>
           </p>
 
         </div>
@@ -195,8 +220,6 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script type="text/javascript" src="/assets/js/unidades.js"></script>
-  <script type="text/javascript" src="/assets/js/conversor.js"></script>
 
 
   <!-- Template Main JS File -->
