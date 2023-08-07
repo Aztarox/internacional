@@ -86,7 +86,7 @@
 
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
-      <div class="page-header d-flex align-items-center" style="background-image: url('');">
+      <div class="page-header d-flex align-items-center" style="background-image: url('assets/img/BOX-obs.png'); background-repeat: no-repeat; background-size: cover;">
         <div class="container position-relative">
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
@@ -106,37 +106,117 @@
       </nav>
     </div><!-- End Breadcrumbs -->
 
-        <section class="sample-page">
-          <div class="container" data-aos="fade-up">
-              <div class="col-lg-12 col-md-12 align-items-center">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Longitudes</h5>
+    <section class="sample-page">
+      <div class="container" data-aos="fade-up">
+        <div class="col-lg-12 col-md-12 align-items-center">
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <section class="sample-page">
+                <div class="container" data-aos="fade-up">
+                    <div class="col-lg-12 col-md-12 align-items-center">
+                      <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Longitudes</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item"><input type="number" class="form-control" name="unidad1valor" id="unidad1valor" placeholder="1" onchange="convertirLongitudes();"></li>
+                          <li class="list-group-item"><label>De:</label>
+                            <select class="form-control" id="unidad1name" name="unidad1name" placeholder="kilometros" onchange="convertirLongitudes();">
+                              <option value="1">Kilometros (km)</option>
+                              <option value="2">Metros (m)</option>
+                              <option value="3">Milla (mi)</option>
+                              <option value="4">Pie (ft)</option>
+                              <option value="5">Pulgada (in)</option>
+                            </select></li>
+                          <li class="list-group-item"><label>A:</label>
+                            <select class="form-control" id="unidad2name" name="unidad2name" onchange="convertirLongitudes();">
+                              <option value="1">Kilometros (km)</option>
+                              <option value="2">Metros (m)</option>
+                              <option value="3">Milla (mi)</option>
+                              <option value="4">Pie (ft)</option>
+                              <option value="5">Pulgada (in)</option>
+                            </select> </li>
+                          <li class="list-group-item align-items-center"><p class="align-items-center" id="mens1"><strong>RESULTADO</strong></p></li>
+                        </ul>
+                      </div>                
                   </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><input type="number" class="form-control" name="unidad1valor" id="unidad1valor" placeholder="1" onchange="convertir();"></li>
-                    <li class="list-group-item"><label>De:</label>
-                      <select class="form-control" id="unidad1name" name="unidad1name" placeholder="kilometros" onchange="convertir();">
-                        <option value="1">Kilometros (km)</option>
-                        <option value="2">Metros (m)</option>
-                        <option value="3">Milla (mi)</option>
-                        <option value="4">Pie (ft)</option>
-                        <option value="5">Pulgada (in)</option>
-                      </select></li>
-                    <li class="list-group-item"><label>A:</label>
-                      <select class="form-control" id="unidad2name" name="unidad2name" onchange="convertir();">
-                        <option value="1">Kilometros (km)</option>
-                        <option value="2">Metros (m)</option>
-                        <option value="3">Milla (mi)</option>
-                        <option value="4">Pie (ft)</option>
-                        <option value="5">Pulgada (in)</option>
-                      </select> </li>
-                    <li class="list-group-item align-items-center"><p class="align-items-center" id="mens1"><strong>RESULTADO</strong></p></li>
-                  </ul>
-                </div>                
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <section class="sample-page">
+                <div class="container" data-aos="fade-up">
+                    <div class="col-lg-12 col-md-12 align-items-center">
+                      <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Masa</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item"><input type="number" class="form-control" name="unidad1valor" id="unidad1valor" placeholder="1" onchange="convertir();"></li>
+                          <li class="list-group-item"><label>De:</label>
+                            <select class="form-control" id="unidad1name" name="unidad1name" placeholder="kilometros" onchange="convertir();">
+                              <option value="1">Kilometros (km)</option>
+                              <option value="2">Metros (m)</option>
+                              <option value="3">Milla (mi)</option>
+                              <option value="4">Pie (ft)</option>
+                              <option value="5">Pulgada (in)</option>
+                            </select></li>
+                          <li class="list-group-item"><label>A:</label>
+                            <select class="form-control" id="unidad2name" name="unidad2name" onchange="convertir();">
+                              <option value="1">Kilometros (km)</option>
+                              <option value="2">Metros (m)</option>
+                              <option value="3">Milla (mi)</option>
+                              <option value="4">Pie (ft)</option>
+                              <option value="5">Pulgada (in)</option>
+                            </select> </li>
+                          <li class="list-group-item align-items-center"><p class="align-items-center" id="mens1"><strong>RESULTADO</strong></p></li>
+                        </ul>
+                      </div>                
+                  </div>
+                </div>
+              </section>  
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <section class="sample-page">
+                <div class="container" data-aos="fade-up">
+                    <div class="col-lg-12 col-md-12 align-items-center">
+                      <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Volumen</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item"><input type="number" class="form-control" name="unidad1valor" id="unidad1valor" placeholder="1" onchange="convertir();"></li>
+                          <li class="list-group-item"><label>De:</label>
+                            <select class="form-control" id="unidad1name" name="unidad1name" placeholder="kilometros" onchange="convertir();">
+                              <option value="1">Kilometros (km)</option>
+                              <option value="2">Metros (m)</option>
+                              <option value="3">Milla (mi)</option>
+                              <option value="4">Pie (ft)</option>
+                              <option value="5">Pulgada (in)</option>
+                            </select></li>
+                          <li class="list-group-item"><label>A:</label>
+                            <select class="form-control" id="unidad2name" name="unidad2name" onchange="convertir();">
+                              <option value="1">Kilometros (km)</option>
+                              <option value="2">Metros (m)</option>
+                              <option value="3">Milla (mi)</option>
+                              <option value="4">Pie (ft)</option>
+                              <option value="5">Pulgada (in)</option>
+                            </select> </li>
+                          <li class="list-group-item align-items-center"><p class="align-items-center" id="mens1"><strong>RESULTADO</strong></p></li>
+                        </ul>
+                      </div>                
+                  </div>
+                </div>
+              </section>  
             </div>
           </div>
-        </section>  
+        </div>
+      </div>    
+    </section>
+
+        
+        
+
 
   </main><!-- End #main -->
 
