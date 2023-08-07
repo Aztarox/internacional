@@ -345,7 +345,7 @@ function inco(){
 
 
 // Convertidor de longitudes
-function convertir(){
+function convertirLongitudes(){
 
   //Extracción de datos
   var numero1 = document.getElementById("unidad1valor").value;
