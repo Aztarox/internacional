@@ -1888,7 +1888,7 @@ section {
 .hero {
   width: 100%;
   position: relative;
-  background: var(--color-primary) url("../img/BANNER3.jpg") center fixed no-repeat;
+  background: var(--color-primary) url("../img/BANNER4.jpg") right fixed no-repeat;
   
 
 }
@@ -1975,6 +1975,7 @@ section {
     right: 0;
     height: calc(50% + 20px);
     background-color: #fff;
+    opacity: 10%;
   }
 }
 
@@ -2739,4 +2740,56 @@ body {
 .btn-outline-info:hover {
   background-color:  #62f537;
   color: #e7396e,
+}
+
+.img-black {
+
+  filter: brightness(100%);
+  
+}
+
+.link-especial {
+
+  color: white;
+}
+
+.link-especial:hover{
+
+  color: #e7396e;
+}
+
+.btn-flotante {
+	font-size: 16px; /* Cambiar el tamaño de la tipografia */
+	text-transform: uppercase; /* Texto en mayusculas */
+	font-weight: bold; /* Fuente en negrita o bold */
+	color: #ffffff; /* Color del texto */
+	border-radius: 90px; /* Borde del boton */
+	letter-spacing: 2px; /* Espacio entre letras */
+	background-color: #fff; /* Color de fondo */
+	padding: 30px 30px 30px 30px; /* Relleno del boton */
+	position: fixed;
+	bottom: 90px;
+	right: 10px;
+	transition: all 300ms ease 0ms;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	z-index: 99;
+  background-image: url('../img/icono_ayuda.png');
+  background-size: cover;
+}
+.btn-flotante:hover {
+	background-color: #2c2fa5; /* Color de fondo al pasar el cursor */
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+	transform: translateY(-7px);
+}
+@media only screen and (max-width: 600px) {
+ 	.btn-flotante {
+		font-size: 14px;
+		padding: 20px 20px 20px 20px;
+		bottom: 70px;
+		right: 20px;
+	}
+} 
+
+.btn-google{
+  size: 10px;
 }
