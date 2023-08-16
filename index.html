@@ -50,16 +50,17 @@
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo-blanco.png" height="100px">
       </a>
+      <div id="google_translate_element" class="google"></div>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="conocenos.html">Conócenos</a></li>
           <li class="dropdown"><a href="#"><span>Soluciones</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="Starken-lcl.html">Starken LCL</a></li>
-              <li><a href="starken-fcl.html">Starken FCL</a></li>
-              <li><a href="starken-box.html">Starken Box</a></li>
+              <li><a href="starken-ecommerce.html">Starken e-commerce</a></li>
+              <li><a href="starken-lcl.html">Starken LCL</a></li>
               <li><a href="starken-air.html">Starken Air</a></li>
-              <li><a href="https://www.starken.cl" target="_blank">Starken Nacional</a></li>
+              <li><a href="starken-box.html">Starken Box</a></li>
+              <li><a href="starken-fcl.html">Starken FCL</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Centro de ayuda</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -70,9 +71,9 @@
             </ul>
           </li>
           <li><a href="#contact">Contacto</a></li>
-          <li><button class="btn btn-outline-info" onclick="login()">My STKINT</button></li>
-
+          <li><button class="btn btn-outline-info" onclick="login()">MY STARKEN</button></li>
         </ul>
+        
       </nav><!-- .navbar -->
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -81,16 +82,16 @@
     </div>
   </header><!-- End Header -->
   <!-- End Header -->
-
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero">
     <div class="container position-relative">
       <div class="row gy-5" data-aos="fade-in">
         <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
-          <h2>DESCUBRE NUESTRA NUEVA <span>CADENA LOGÍSTICA INTEGRAL</span></h2>
-          <p>Operador logístico internacional:  4PL Freight Forwarding y logística.
-            Simplificamos la cadena logística end to end a través de un operador único, optimizamos tus costos para un resultado más competitivo y transparente. Facilitamos el proceso de comercio exterior.
-            </p>         
+          <h2 >DESCUBRE NUESTRA NUEVA <span>CADENA LOGÍSTICA INTEGRAL</span></h2>
+          <p >Operador Logístico Internacional: 4PL, cadena de suministro integral y Freight Forwarding. <br>
+            Simplificamos la cadena logística a través de un operador único, optimizamos tus costos para un resultado más competitivo y transparente. Además, facilitamos el proceso de Comercio Exterior, ofreciendo servicios "End to End" y tarifas integradas.            
+            </p>
+         
         </div>
       </div>
     </div>
@@ -112,25 +113,25 @@
                 <h2 style="color: grey">Cotiza con nosotros</h2><p style="color: grey">Completa el formulario y nos contactaremos para mayor detalle.</p>
                 
                 <div>
-                  <input type="text" class="form-control" placeholder="Origen" style="margin: 10px;" name="Origen">
-                  <input type="text" class="form-control" placeholder="Destino" style="margin: 10px;" name="Destino">
+                  <input type="text" class="form-control" placeholder="Origen" style="margin: 10px;" name="Origen" required>
+                  <input type="text" class="form-control" placeholder="Destino" style="margin: 10px;" name="Destino" required>
                 </div>
                 <div class="col-3">
-                  <input type="number" class="form-control" placeholder="Peso kg" style="margin: 10px;" name="Peso">
+                  <input type="number" class="form-control" placeholder="Peso kg" style="margin: 10px;" name="Peso" required>
                 </div>
                 <div class="col-3">
                   <div class="md-form mb-0">
-                    <input type="number" class="form-control" placeholder="Alto cm" style="margin: 10px;" name="Alto">
+                    <input type="number" class="form-control" placeholder="Alto cm" style="margin: 10px;" name="Alto" required>
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="md-form mb-0">    
-                  <input type="number" class="form-control" placeholder="Ancho cm" style="margin: 10px;" name="Ancho">
+                  <input type="number" class="form-control" placeholder="Ancho cm" style="margin: 10px;" name="Ancho" required>
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="md-form mb-0">      
-                    <input type="number" class="form-control" placeholder="Largo cm" style="margin: 10px;" name="Largo"> 
+                    <input type="number" class="form-control" placeholder="Largo cm" style="margin: 10px;" name="Largo" required> 
                   </div>
                 </div> 
                 
@@ -171,13 +172,16 @@
             <div class="icon-box2">
               <h4 class="title">Sigue tu envío</h4>
               <div style="margin: 50px 50px 50px 50px;">
-                <a href="https://www.starkenbox.com/" target="_blank"><button type="button" class="btn btn-outline-secondary">Starken Box</button></a>
+                <button type="button" class="btn btn-outline-info" onclick="box()"><i class="bi bi-bookmark">Starken Box</i></button>
+                <p style="color: black; font-size: 11px">Tu casilla internacional en Miami</p>
               </div>
               <div style="margin: 50px 50px 50px 50px;">
-                <a href="https://www.starken.cl/seguimiento" target="_blank"><button type="button" class="btn btn-outline-secondary">Starken CL</button></a>
+                <a href="https://www.starken.cl/seguimiento" target="_blank"><button type="button" class="btn btn-outline-info"><i class="bi bi-bookmark">Starken Chile</i></button></a>
+                <p style="color: black; font-size: 11px">Tus envíos a todo Chile</p>
               </div>
               <div style="margin: 50px 50px 50px 50px;">
-                <button type="button" class="btn btn-outline-secondary" onclick="login()">Starken Int</button>
+                <button type="button" class="btn btn-outline-info" onclick="login()"><i class="bi bi-bookmark">Starken Internacional </i></button>
+                <p style="color: black; font-size: 11px">Tus envíos sin fronteras </p>
               </div>
             </div>
           </div><!--End Icon Box -->
@@ -217,7 +221,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="service-item position-relative">
               <div class="">
-                <img src="assets/img/cta-bg.jpg" width="200px">
+                <img src="assets/img/starkenair1.jpg" width="200px">
               </div>
               <h3>Starken AIR</h3>
               <p>Nuestra plataforma nos permite ofrecer servicio express courier end to end para cargas de todo el mundo hasta la puerta de tu casa. como también servicios aereos generales de importación y exportación.</p>
@@ -228,19 +232,19 @@
           <div class="col-lg-4 col-md-6">
             <div class="service-item position-relative">
               <div class="">
-                <img src="assets/img/breadcrumbs-bg.jpg" width="200px">
+                <img src="assets/img/starkenecommerce1.jpg" width="200px">
               </div>
               <h3>Starken E-commerce</h3>
               <p>Servicio de Ecommerce internacional con logística nacional y fullfillment.
                 Ofrecemos soluciones como traje a la medida para atender las necesidades del ecommerce mundial.</p>
-              <a href="starken-fcl.html" class="readmore stretched-link">Seguir leyendo <i class="bi bi-arrow-right"></i></a>
+              <a href="starken-ecommerce.html" class="readmore stretched-link">Seguir leyendo <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-lg-6 col-md-6">
             <div class="service-item position-relative">
               <div class="">
-                <img src="assets/img/breadcrumbs-bg.jpg" width="200px">
+                <img src="assets/img/FCL1.jpg" width="200px">
               </div>
               <h3>Starken FCL</h3>
               <p>Ofrecemos servicios de transporte marítimo full container integradas, permitiendo entregar servicios de end to end o puerto a puerto, facilitando la logística internacional.</p>
@@ -350,13 +354,14 @@
           <a href="index.html" class="logo align-items-center">
             <img src="assets/img/logo-blanco.png" height="500px" class="logo align-items-center">
           </a>
-          <p>Starken Internacional nace de la unión de dos actores importantes del mundo de la logística internacional y distribución nacional: Starken (Grupo Tur Bus) y Boarder Logistics (Grupo BL Corporations).</p>
+          <p>Starken Internacional nace de la unión de dos actores importantes del mundo de la logística internacional y distribución nacional: <a class="link-especial" href="https://www.starken.cl/" target="_blank">Starken (Grupo Tur Bus)</a> y <a class="link-especial" href="https://www.blcorporations.com/" target="_blank"> Logistics (Grupo BL Corporations)</a>.</p>
           <!--RRSS -->
           <div class="align-items-center">
           <div class="social-links d-flex mt-4">
               <a href="https://www.facebook.com/StarkenCL" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
               <a href="https://www.instagram.com/starkencl/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
               <a href="https://www.linkedin.com/company/10626843/admin/feed/posts/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <img src="assets/img/bl-logo.webp" height="50px" class="logo align-items-center">
           </div>
         </div>
         </div>
@@ -376,10 +381,10 @@
         <div class="col-lg-2 col-6 footer-links">
           <h4>Nuestros Servicios</h4>
           <ul>
-            <li><a href="https://www.starken.cl" target="_blank">Starken Nacional</a></li>
-            <li><a href="starken-box.html">Starken BOX</a></li>
-            <li><a href="starken-air.html">Starken AIR</a></li>
+            <li><a href="starken-ecommerce.html">Starken E-commerce</a></li>
             <li><a href="starken-lcl.html">Starken LCL</a></li>
+            <li><a href="starken-air.html">Starken AIR</a></li>
+            <li><a href="starken-box.html">Starken BOX</a></li>
             <li><a href="starken-fcl.html">Starken FCL</a></li>
           </ul>
         </div>
@@ -410,6 +415,8 @@
   </footer><!-- End Footer -->
   <!-- End Footer -->
 
+  <a href="#" class="btn-flotante" onclick="chat()"></a>
+
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
@@ -421,7 +428,21 @@
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <!--<script>window.rwbp={email:'vision_of_milo@yahoo.com',phone:'5556911111111',message:'Hola, en que te puedo ayudar?',lang:'pt-en'}</script><script defer async src='https://duz4dqsaqembt.cloudfront.net/client/whats.js'></script> -->
+  
+  <!-- Translate -->  
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+
+       <!--Translate-->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+    {pageLanguage: 'es', 
+    includedLanguages: 'en,zh-CN', 
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE, 
+    gaTrack: true}, 
+    'google_translate_element');
+    }
+</script>  
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
