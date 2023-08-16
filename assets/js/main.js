@@ -292,6 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+// cotizador alerta
 function alerta(){
 	Swal.fire({
 		position: 'center',
@@ -302,6 +303,8 @@ function alerta(){
 	});
 }
 
+
+// contacto alerta
 function alerta2(){
 	Swal.fire({
 		position: 'center',
@@ -312,10 +315,11 @@ function alerta2(){
 	});
 }
 
+// login alerta
 function login(){
 	Swal.fire({
-    title: 'My STKINT',
-    html: `<input type="text" id="login" class="swal2-input" placeholder="Mail">
+    title: 'MY STARKEN',
+    html: `<p style="font-size: 12px"><b>Descubre tu trazabilidad “End to End” y plataforma personalizada.</b></p><br><input type="text" id="login" class="swal2-input" placeholder="Mail">
     <input type="password" id="password" class="swal2-input" placeholder="Password">`,
     confirmButtonText: 'Ingresar',
     focusConfirm: false,
@@ -334,6 +338,7 @@ function login(){
   })
 }
 
+// Incoterms
 function inco(){
 	Swal.fire({
 		position: 'center',
@@ -342,6 +347,27 @@ function inco(){
 		showConfirmButton: false,
 	});
 }
+
+// Alerta box off line
+function box(){
+	Swal.fire({
+		position: 'center',
+    width: 800,
+    html: 'Próximamente Starken Box Online <br><div align="center"><button class="btn btn-primary">Abre tu casilla Gratis</button></div>',
+		showConfirmButton: false,
+	});
+}
+
+// Chat
+function chat(){
+	Swal.fire({
+		position: 'center',
+		icon: 'warning',
+		title: 'próximamente',
+		showConfirmButton: false,
+	});
+}
+
 
 
 // Convertidor de longitudes
