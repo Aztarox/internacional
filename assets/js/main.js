@@ -481,11 +481,181 @@ function convertirLongitudes(){
   var resultadoformula = formulas();
 
   //resultado
-  var resultado = "<b>" + formatearNumero(calculado) + " " + medidas + "</b><br> " + resultadoformula;
+  var resultado = "<b style='color: #01873d'>" + formatearNumero(calculado) + " " + medidas + "</b><br> " + resultadoformula;
   
 
   // Escribiendo el resultado
   document.getElementById('mens1').innerHTML = resultado;  
   
 
+};
+
+// Convertidor de Masa
+function convertirMasa(){
+
+  //Extracción de datos
+  var numeromasa1 = document.getElementById("unidadmasa1valor").value;
+  var unidadmasa1 = document.getElementById("unidadmasa1name").value;
+  var unidadmasa2 = document.getElementById("unidadmasa2name").value;
+
+  //medidas
+  function unidadMasa(unidadmasa2){  
+    var unidadfinalmasa
+    if(unidadmasa2 === "1"){unidadfinalmasa = "kg";}
+    else if (unidadmasa2 === "2") {unidadfinalmasa = "lb";}
+    else {unidadfinalmasa = "t";}
+  
+    return unidadfinalmasa;
+  };
+  var medidasmasa = unidadMasa(unidadmasa2);
+
+  // Validaciones
+  if (numeromasa1 <= 0){
+    Swal.fire({
+      icon: 'warning',
+      position: 'center',
+      width: 800,
+      html: 'El número debe ser mayor a 0(cero)',
+      showConfirmButton: false,
+    });
+    
+  } else {resultadomasa}
+
+  //Calculando
+  function calculandoMasa(){
+
+    var resultadocalculandomasa
+
+    if (unidadmasa1 === "1" && unidadmasa2 === "1") {resultadocalculandomasa = numeromasa1 * 1;}
+    else if (unidadmasa1 === "1" && unidadmasa2 === "2") {resultadocalculandomasa = numeromasa1 * 2.205;}
+    else if (unidadmasa1 === "1" && unidadmasa2 === "3") {resultadocalculandomasa = numeromasa1 / 1000;}
+    else if (unidadmasa1 === "2" && unidadmasa2 === "1") {resultadocalculandomasa = numeromasa1 / 2.205;}
+    else if (unidadmasa1 === "2" && unidadmasa2 === "2") {resultadocalculandomasa = numeromasa1 * 1;}
+    else if (unidadmasa1 === "2" && unidadmasa2 === "3") {resultadocalculandomasa = numeromasa1 / 2205;}
+    else if (unidadmasa1 === "3" && unidadmasa2 === "1") {resultadocalculandomasa = numeromasa1 * 1000;}
+    else if (unidadmasa1 === "3" && unidadmasa2 === "2") {resultadocalculandomasa = numeromasa1 * 2205;}
+    else if (unidadmasa1 === "3" && unidadmasa2 === "3") {resultadocalculandomasa = numeromasa1 * 1;}
+
+    return resultadocalculandomasa
+  };
+
+  var calculadomasa = calculandoMasa();
+  
+  // Agregar separador de miles
+  function formatearNumeroMasa (calculadomasa){
+    return new Intl.NumberFormat("es-CL").format(calculadomasa);
+  }
+
+  //Formulas
+  function formulasMasa(){
+
+    var formularesultadomasa
+
+    if (unidadmasa1 === "1" && unidadmasa2 === "1") {formularesultadomasa = " ";}
+    else if (unidadmasa1 === "1" && unidadmasa2 === "3") {formularesultadomasa = "<b>Fórmula:</b> debes dividir por 1000";}
+    else if (unidadmasa1 === "1" && unidadmasa2 === "2") {formularesultadomasa = "<b>Fórmula:</b> debes multiplicar por 2,205";}
+    else if (unidadmasa1 === "2" && unidadmasa2 === "1") {formularesultadomasa = "<b>Fórmula:</b> debes dividir por 2,205";}
+    else if (unidadmasa1 === "2" && unidadmasa2 === "2") {formularesultadomasa = " ";}
+    else if (unidadmasa1 === "2" && unidadmasa2 === "3") {formularesultadomasa = "<b>Fórmula:</b> debes dividir por 2205";}
+    else if (unidadmasa1 === "3" && unidadmasa2 === "1") {formularesultadomasa = "<b>Fórmula:</b> debes multiplicar por 1000";}
+    else if (unidadmasa1 === "3" && unidadmasa2 === "2") {formularesultadomasa = "<b>Fórmula:</b> debes multiplicar por 2205";}
+    else if (unidadmasa1 === "3" && unidadmasa2 === "3") {formularesultadomasa = " ";}
+
+    return formularesultadomasa
+  };
+
+  var resultadoformulamasa = formulasMasa();
+
+  //resultado
+  var resultadomasa = "<b style='color: #01873d'>" + formatearNumeroMasa(calculadomasa) + " " + medidasmasa + "</b><br> " + resultadoformulamasa;
+  
+
+  // Escribiendo el resultado
+  document.getElementById('mens2').innerHTML = resultadomasa;  
+  
+};
+
+// Convertidor de Volumen
+function convertirVolumen(){
+
+  //Extracción de datos
+  var numerovol1 = document.getElementById("unidadvol1valor").value;
+  var unidadvol1 = document.getElementById("unidadvol1name").value;
+  var unidadvol2 = document.getElementById("unidadvol2name").value;
+
+  //medidas
+  function unidadVol(unidadvol2){  
+    var unidadfinalvol
+    if(unidadvol2 === "1"){unidadfinalvol = "l";}
+    else if (unidadvol2 === "2") {unidadfinalvol = "gal EE.UU";}
+    else {unidadfinalvol = "gal Imperial";}
+  
+    return unidadfinalvol;
+  };
+  var medidasvol = unidadVol(unidadvol2);
+
+  // Validaciones
+  if (numerovol1 <= 0){
+    Swal.fire({
+      icon: 'warning',
+      position: 'center',
+      width: 800,
+      html: 'El número debe ser mayor a 0(cero)',
+      showConfirmButton: false,
+    });
+    
+  } else {resultadovol}
+
+  //Calculando
+  function calculandoVol(){
+
+    var resultadocalculandovol
+
+    if (unidadvol1 === "1" && unidadvol2 === "1") {resultadocalculandovol = numerovol1 * 1;}
+    else if (unidadvol1 === "1" && unidadvol2 === "2") {resultadocalculandovol = numerovol1 / 3.785;}
+    else if (unidadvol1 === "1" && unidadvol2 === "3") {resultadocalculandovol = numerovol1 / 4.546;}
+    else if (unidadvol1 === "2" && unidadvol2 === "1") {resultadocalculandovol = numerovol1 * 3.785;}
+    else if (unidadvol1 === "2" && unidadvol2 === "2") {resultadocalculandovol = numerovol1 * 1;}
+    else if (unidadvol1 === "2" && unidadvol2 === "3") {resultadocalculandovol = numerovol1 / 1.201;}
+    else if (unidadvol1 === "3" && unidadvol2 === "1") {resultadocalculandovol = numerovol1 * 4.546;}
+    else if (unidadvol1 === "3" && unidadvol2 === "2") {resultadocalculandovol = numerovol1 * 1.201;}
+    else if (unidadvol1 === "3" && unidadvol2 === "3") {resultadocalculandovol = numerovol1 * 1;}
+
+    return resultadocalculandovol
+  };
+
+  var calculadovol = calculandoVol();
+  
+  // Agregar separador de miles
+  function formatearNumeroVol (calculadovol){
+    return new Intl.NumberFormat("es-CL").format(calculadovol);
+  }
+
+  //Formulas
+  function formulasVol(){
+
+    var formularesultadovol
+
+    if (unidadvol1 === "1" && unidadvol2 === "1") {formularesultadovol = " ";}
+    else if (unidadvol1 === "1" && unidadvol2 === "3") {formularesultadovol = "<b>Fórmula:</b> debes dividir por 4,546";}
+    else if (unidadvol1 === "1" && unidadvol2 === "2") {formularesultadovol = "<b>Fórmula:</b> debes dividir por 3,785";}
+    else if (unidadvol1 === "2" && unidadvol2 === "1") {formularesultadovol = "<b>Fórmula:</b> debes multiplicar por 3,785";}
+    else if (unidadvol1 === "2" && unidadvol2 === "2") {formularesultadovol = " ";}
+    else if (unidadvol1 === "2" && unidadvol2 === "3") {formularesultadovol = "<b>Fórmula:</b> debes dividir por 1.201";}
+    else if (unidadvol1 === "3" && unidadvol2 === "1") {formularesultadovol = "<b>Fórmula:</b> debes multiplicar por 4,546";}
+    else if (unidadvol1 === "3" && unidadvol2 === "2") {formularesultadovol = "<b>Fórmula:</b> debes multiplicar por 1,201";}
+    else if (unidadvol1 === "3" && unidadvol2 === "3") {formularesultadovol = " ";}
+
+    return formularesultadovol
+  };
+
+  var resultadoformulavol = formulasVol();
+
+  //resultado
+  var resultadovol = "<b style='color: #01873d'>" + formatearNumeroVol(calculadovol) + " " + medidasvol + "</b><br> " + resultadoformulavol;
+  
+
+  // Escribiendo el resultado
+  document.getElementById('mens3').innerHTML = resultadovol;  
+  
 };
