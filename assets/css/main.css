@@ -81,6 +81,7 @@ section {
 
 .sections-bg {
   background-color: #f6f6f6;
+  font-size: 19px;
 }
 
 .section-header {
@@ -1003,7 +1004,7 @@ section {
 
 .services .service-item p {
   line-height: 24px;
-  font-size: 14px;
+  font-size: 17px;
   margin-bottom: 0;
 }
 
