@@ -90,7 +90,7 @@
 
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
-      <div class="page-header d-flex align-items-center" style="background-image: url('assets/img/BOX-obs.png'); background-repeat: no-repeat; background-size: cover;">
+      <div class="page-header d-flex align-items-center" style="background-image: url('assets/img/medir1.jpg'); background-repeat: no-repeat; background-size: cover;">
         <div class="container position-relative">
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
@@ -148,6 +148,66 @@
                 </div>
               </section>
             </div>
+            <!--Masa-->
+            <div class="col-lg-4 col-md-6">
+              <section class="sample-page">
+                <div class="container">
+                    <div class="col-lg-12 col-md-12 align-items-center">
+                      <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Masa</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item"><input type="number" class="form-control" name="unidadmasa1valor" id="unidadmasa1valor" placeholder="1" onchange="convertirMasa();"></li>
+                          <li class="list-group-item"><label>De:</label>
+                            <select class="form-control" id="unidadmasa1name" name="unidadmasa1name" placeholder="kilometros" onchange="convertirMasa();">
+                              <option value="1">Kilogramo (kg)</option>
+                              <option value="2">Libra (lb)</option>
+                              <option value="3">Tonelada (t)</option>
+                            </select></li>
+                          <li class="list-group-item"><label>A:</label>
+                            <select class="form-control" id="unidadmasa2name" name="unidadmasa2name" onchange="convertirMasa();">
+                              <option value="1">Kilogramo (kg)</option>
+                              <option value="2">Libra (lb)</option>
+                              <option value="3">Tonelada (t)</option>
+                            </select> </li>
+                          <li class="list-group-item align-items-center"><p class="align-items-center" id="mens2"><strong>RESULTADO</strong></p></li>
+                        </ul>
+                      </div>                
+                  </div>
+                </div>
+              </section>
+            </div>
+            <!--Volumen-->
+            <div class="col-lg-4 col-md-6">
+              <section class="sample-page">
+                <div class="container">
+                    <div class="col-lg-12 col-md-12 align-items-center">
+                      <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Volumen</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item"><input type="number" class="form-control" name="unidadvol1valor" id="unidadvol1valor" placeholder="1" onchange="convertirVolumen();"></li>
+                          <li class="list-group-item"><label>De:</label>
+                            <select class="form-control" id="unidadvol1name" name="unidadvol1name" placeholder="kilometros" onchange="convertirVolumen();">
+                              <option value="1">Litro (l)</option>
+                              <option value="2">Galón EE.UU (gal EE.UU)</option>
+                              <option value="3">Galón Imperial (gal Imperial)</option>
+                            </select></li>
+                          <li class="list-group-item"><label>A:</label>
+                            <select class="form-control" id="unidadvol2name" name="unidadvol2name" onchange="convertirVolumen();">
+                              <option value="1">Litro (l)</option>
+                              <option value="2">Galón EE.UU (gal EE.UU)</option>
+                              <option value="3">Galón Imperial (gal Imperial)</option>
+                            </select> </li>
+                          <li class="list-group-item align-items-center"><p class="align-items-center" id="mens3"><strong>RESULTADO</strong></p></li>
+                        </ul>
+                      </div>                
+                  </div>
+                </div>
+              </section>
+            </div>                          
           </div>
         </div>
       </div>    
